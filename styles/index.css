@@ -36,3 +36,31 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+#image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #4CAF50;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
