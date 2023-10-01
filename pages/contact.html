@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Weboldal - Kapcsolat</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="icon" href="../images/capybara-walk.gif" type="image/gif" />
+</head>
+
+<body>
+    <header>
+        <h1>Kapcsolat</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Kezdőlap</a></li>
+            <li><a href="introduction.html">A Capybarákról</a></li>
+            <li><a href="facts.html">Tények a Capybarákról</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h3>Vegye fel velünk a kapcsolatot!</h3>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="canWeContact">Feliratkozik a hírlevélre: </label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+            </div>
+            <button type="submit">Elküld</button>
+        </form>
+    
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2023 Capybara Weboldal</p>
+    </footer>
+</body>
+
+</html>
