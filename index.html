@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="icon" href="images/capybara-walk.gif" type="image/gif" />
 </head>
+
 <body>
     <header>
         <h1>Capybara bemutató weboldal</h1>
@@ -21,9 +23,15 @@
         </ul>
     </nav>
     <main>
+        <div id="colorChangeButtons">
+            <button id="colorChangerRed">Piros</button>
+            <button id="colorChangerGreen">Zöld</button>
+            <button id="colorChangerBlue">Kék</button>
+        </div>
         <section>
             <h2>Mi az a Capybara?</h2>
-            <p>A capybara (Hydrochoerus hydrochaeris) a világ legnagyobb rágcsálója, és az egyetlen faj a Hydrochoerinae alcsaládban. Ez a különleges állat Dél-Amerikában őshonos, és a vízparthoz közel él.</p>
+            <p>A capybara (Hydrochoerus hydrochaeris) a világ legnagyobb rágcsálója, és az egyetlen faj a Hydrochoerinae
+                alcsaládban. Ez a különleges állat Dél-Amerikában őshonos, és a vízparthoz közel él.</p>
         </section>
         <section id="capybara-image-section">
             <h2>Képek a Capybaráról</h2>
@@ -33,10 +41,13 @@
                 <button id="next-button" class="nav-button">&gt;</button>
             </div>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2023 Capybara Weboldal</p>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/headerColor.js"></script>
 </body>
+
 </html>

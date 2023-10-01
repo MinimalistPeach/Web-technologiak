@@ -23,6 +23,11 @@
         </ul>
     </nav>
     <main>
+        <div id="colorChangeButtons">
+            <button id="colorChangerRed">Piros</button>
+            <button id="colorChangerGreen">Zöld</button>
+            <button id="colorChangerBlue">Kék</button>
+        </div>
         <h3>Vegye fel velünk a kapcsolatot!</h3>
         <form id="contactForm">
             <div class="form-group">
@@ -41,14 +46,15 @@
                 <label for="canWeContact">Feliratkozik a hírlevélre: </label>
                 <input type="checkbox" id="newsletter" name="newsletter">
             </div>
-            <button type="submit">Elküld</button>
+            <button id="submitButton" type="submit">Elküld</button>
         </form>
-    
-        <script src="script.js"></script>
+
     </main>
     <footer>
         <p>&copy; 2023 Capybara Weboldal</p>
     </footer>
+    <script src="../scripts/headerColor.js"></script>
+    <script src="../scripts/form.js"></script>
 </body>
 
 </html>
