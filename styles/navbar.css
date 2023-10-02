@@ -1,10 +1,11 @@
-.navbar {
+#navbar {
     background-color: #4CAF50;
     color: white;
     text-align: center;
+    border: 1px solid white;
 }
 
-.navbar ul {
+#navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -12,11 +13,11 @@
     justify-content: center;
 }
 
-.navbar li {
+#navbar li {
     margin: 0 20px;
 }
 
-.navbar a {
+#navbar a {
     display: block;
     color: white;
     text-align: center;
@@ -24,6 +25,6 @@
     text-decoration: none;
 }
 
-.navbar a:hover {
+#navbar a:hover {
     background-color: #45a049;
 }
