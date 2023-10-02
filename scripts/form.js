@@ -1,36 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById("contactForm");
+function validateForm() {
+    let nameField = document.forms["contactForm"]["name"].value;
+    let emailField = document.forms["contactForm"]["email"].value;
+    let messageField = document.forms["contactForm"]["message"].value;
+    let newsLetterField = document.forms["contactForm"]["newsletter"].checked;
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    let errorMess = "";
+    if (nameField == "") {
+        document.getElementById("name").style.outline = "1px solid red";
+        errorMess += "Név mező kitöltése kötelező!!<br>";
+    }
+    else {
+        document.getElementById("name").style.outline = "none";
+    }
 
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const nameField = document.getElementById("name");
-        const emailField = document.getElementById("email");
-        const messageField = document.getElementById("message");
-        const newsletterField = document.getElementById("newsletter");
+    if (emailField == "") {
+        document.getElementById("email").style.outline = "1px solid red";
+        errorMess += "Email mező kitöltése kötelező!!<br>"
+    }
+    else {
+        document.getElementById("email").style.outline = "none";
+    }
 
-        const subscribedToNewstletter = newsletterField.checked ? "Igen" : "Nem";
+    if (!emailRegex.test(emailField)) {
+        document.getElementById("email").style.outline = "1px solid red";
+        errorMess += "Email formátuma nem megfelelő! (Helyes formátum példa: kissbela@gmail.com)<br>"
+    }
+    else {
+        document.getElementById("email").style.outline = "none";
+    }
 
-        nameField.classList.remove("error");
-        emailField.classList.remove("error");
-        messageField.classList.remove("error");
+    if (messageField == "") {
+        document.getElementById("message").style.outline = "1px solid red";
+        errorMess += "Üzenet mező kitöltése kötelező!!<br>"
+    }
+    else {
+        document.getElementById("message").style.outline = "none";
+    }
 
-        if (nameField.value.trim() === "") {
-            nameField.classList.add("error");
-        }
-
-        if (emailField.value.trim() === "") {
-            emailField.classList.add("error");
-        }
-
-        if (messageField.value.trim() === "") {
-            messageField.classList.add("error");
-        }
-
-        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-        if (!emailRegex.test(emailField.value)) {
-            emailField.classList.add("error");
-        }
-
-        alert("Az alábbi üzenet továbbítva:\n" + "Név: " + nameField.value + "\nEmail cím: " + emailField.value + "\nÜzenet: " + messageField.value + "\nHírlevélre feliratkozott: " + subscribedToNewstletter);
-    });
-});
+    if (errorMess.length > 0) {
+        document.getElementById("errors").innerHTML = errorMess;
+        return false;
+    }
+    else {
+        const subscribedToNewstletter = newsLetterField ? "Igen" : "Nem";
+        alert("Az alábbi üzenet továbbítva:\n" + "Név: " + nameField + "\nEmail cím: " + emailField + "\nÜzenet: " + messageField + "\nHírlevélre feliratkozott: " + subscribedToNewstletter);
+        return true;
+    }
+}
