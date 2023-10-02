@@ -5,6 +5,7 @@ function validateForm() {
     let newsLetterField = document.forms["contactForm"]["newsletter"].checked;
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     let errorMess = "";
+    
     if (nameField == "") {
         document.getElementById("name").style.outline = "1px solid red";
         errorMess += "Név mező kitöltése kötelező!!<br>";

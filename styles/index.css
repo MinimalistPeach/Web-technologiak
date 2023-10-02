@@ -125,44 +125,6 @@ textarea {
     cursor: pointer;
 }
 
-#colorChangerRed {
-    background-color: red;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: black 0.5px solid;
-    margin-left: 3px;
-}
-
-#colorChangerBlue {
-    background-color: blue;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: black 0.5px solid;
-    margin-left: 3px;
-}
-
-#colorChangerGreen {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: black 0.5px solid;
-    margin-left: 3px;
-}
-
-#colorChangeButtons {
-    display: flex;
-    justify-content: flex-end;
-}
-
 #submitButton:hover {
     background-color: #0056b3;
 }
@@ -175,4 +137,10 @@ textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     
+}
+
+#color {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }

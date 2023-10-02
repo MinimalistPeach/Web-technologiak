@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("prev-button");
     const nextButton = document.getElementById("next-button");
 
-    // Képek források
+    // Elérhető képek
     const imageSources = ['images/capybara.jpg', 'images/capybara2.jpg', 'images/capybara3.jpg', 'images/capybara4.jpg', 'images/capybara5.jpg'];
 
     let currentImageIndex = 0;
